@@ -2,6 +2,7 @@ import {Stack, Box, Container, Typography, Input, IconButton, Button} from '@mui
 import {Add, Delete} from '@mui/icons-material'
 import { useState } from 'react'
 import { ListComponent } from './ListComponent'
+import { ListComList } from './ListComList'
 
 export const TodoList = () =>{
     const [task,setTask] = useState('')
@@ -38,8 +39,9 @@ export const TodoList = () =>{
             <ul>
                 {
                 tasklist.map((item,index)=>{
-                    return <ListComponent val={item} key={index}/>
-                })
+                    // return <ListComponent val={item} key={index}/>
+                    return <ListComList val={item} key={index}/>
+                                })
             }
             </ul>
         </Box>
