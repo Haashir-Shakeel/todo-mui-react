@@ -7,7 +7,10 @@ export const ListComponent = (props) =>{
 
     const deleteFromList = ()=>{
         console.log('delete from list working')
-        setLine(true)
+        setLine(prevValue=>{
+            console.log(prevValue)
+            return !prevValue
+        })
     }
     return (
         <Stack alignItems='center' justifyContent='flex-start' direction='row'>
